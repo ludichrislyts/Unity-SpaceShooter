@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate;
 	private float nextFire;
+	private static bool alive = true;
 	
 	// Update is called once per frame
 	void Update()
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
 			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			GetComponent<AudioSource> ().Play ();
+
 		}
 	}
 	void FixedUpdate ()
@@ -42,5 +45,15 @@ public class PlayerController : MonoBehaviour {
 
 		player.rotation = Quaternion.Euler (0.0f, 0.0f, player.velocity.x * -tilt) ;
 			
+	}
+
+	public static void kill()
+	{
+		alive = false;
+	}
+
+	public static bool isAlive()
+	{
+		return alive;
 	}
 }

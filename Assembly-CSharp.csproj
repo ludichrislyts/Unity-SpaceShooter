@@ -56,8 +56,12 @@
      <Compile Include="Assets\Assets\Done\Done_Scripts\Done_RandomRotator.cs" />
      <Compile Include="Assets\Assets\Done\Done_Scripts\Done_WeaponController.cs" />
      <Compile Include="Assets\Assets\Scripts\DestroyByBoundary.cs" />
+     <Compile Include="Assets\Assets\Scripts\DestroyByContact.cs" />
+     <Compile Include="Assets\Assets\Scripts\DetroyByTime.cs" />
+     <Compile Include="Assets\Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Assets\Scripts\RandomRotator.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
